@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <%- include('../includes/header') -%>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <%- include('../includes/navbar') -%>
+    <%- include('../includes/sidebar') -%>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Dashboard
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">New Product</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row margin">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">New Products</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                            <hr>
+                            <form action="/admin/save-product" method="post" class="form" enctype="multipart/form-data">
+                                <div class="col-lg-offset-3 col-xs-offset-3 col-xs-6 form-group">
+                                    <label for="category">Product Category</label>
+                                    <select name="product_category" id="category" class="form-control">
+                                        <option>Design</option>
+                                        <option>App</option>
+                                        <option>Web</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-offset-3 col-xs-offset-3 col-xs-6 form-group">
+                                    <label for="image">Product Image</label>
+                                    <input type="file" accept="image/*" class="form-control" id="image" name="product_image" required>
+                                </div>
+                                <div class="col-lg-12 text-center form-group">
+                                    <input type="submit" value="Create" class="btn btn-success">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <%- include('../includes/footer') -%>
+
+</div>
+<!-- ./wrapper -->
+
+
+<%- include('../includes/scripts') -%>
+</body>
+</html>
